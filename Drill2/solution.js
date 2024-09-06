@@ -24,8 +24,19 @@ function isGame() {
     return userList;
 }
 
+// Question 2
+function isInGermany(place) {
+    const usersInGermany = [];
+    for (const key in users) {
+        if (users[key].nationality === place) {
+            usersInGermany.push(key);
+        }
+    }
+    return usersInGermany;
+}
+
 
 module.exports = {
    
-    isGame 
+    isGame ,isInGermany
 };
