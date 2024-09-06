@@ -1,5 +1,5 @@
 const inventory = require("./data");
-const {findCarById} = require("./solution")
+const {findCarById, findLastCar} = require("./solution")
 
 //1
 const carId = findCarById(33);
@@ -9,3 +9,8 @@ const carId = findCarById(33);
     } else {
         console.log('Car not found');
     }
+//2
+    const lastcarlist = findLastCar(inventory);
+        // console.log(car);
+    console.log(`Last car is a ${lastcarlist.car_make} ${lastcarlist.car_model}`);
+        
