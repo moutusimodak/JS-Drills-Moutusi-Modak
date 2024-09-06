@@ -24,9 +24,23 @@ function findLastCar(inventory){
     return inventory[inventory.length -1];
 }
 
+// Question -3
+function sortcar(inventory){
+    const cmodel =[]
+    if (inventory.length === 0) {
+        return 'The inventory is empty.';
+    }
+    
+    for (let i = 0; i < inventory.length; i++) {
+        
+        cmodel.push(inventory[i].car_model);
+    }
+    cmodel.sort();
+   return cmodel;
+}
 
 
 
 
 
-module.exports = { findCarById,findLastCar};
+module.exports = { findCarById,findLastCar, sortcar};
