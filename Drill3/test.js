@@ -1,5 +1,5 @@
 const inventory = require("./data");
-const {findCarById, findLastCar, sortcar,carYear,carsOlderThan2000} = require("./solution")
+const {findCarById, findLastCar, sortcar,carYear,carsOlderThan2000, CarName} = require("./solution")
 
 //1
 const carId = findCarById(33);
@@ -30,3 +30,6 @@ console.log(`${carYearList} \n`);
 const olderCar = carsOlderThan2000(2000);
 console.log(`${olderCar}`);
 
+// 6
+const names = CarName(inventory);
+console.log(JSON.stringify(names));
