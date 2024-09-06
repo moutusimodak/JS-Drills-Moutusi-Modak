@@ -91,5 +91,20 @@ function getAge(){
        return newNameCity;
     }   
 
+// Question -6
 
-module.exports = { getEmail, getHobby, getNames, getNameCity, getAge};
+function getFirstHobby(){
+
+    const hobbylist =[]
+        for (let i = 0; i < arrayOfObjects.length; i++) {
+
+            if (arrayOfObjects[i].hobbies.length > 0) {
+                hobbylist.push(arrayOfObjects[i].hobbies[0]);
+            } else {
+                hobbylist.push("No hobbies available");
+            }
+        }
+            
+       return hobbylist;
+    }
+module.exports = { getEmail, getHobby, getNames, getNameCity, getAge, getFirstHobby};
