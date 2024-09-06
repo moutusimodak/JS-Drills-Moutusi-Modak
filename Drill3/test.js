@@ -1,5 +1,5 @@
 const inventory = require("./data");
-const {findCarById, findLastCar, sortcar} = require("./solution")
+const {findCarById, findLastCar, sortcar,carYear} = require("./solution")
 
 //1
 const carId = findCarById(33);
@@ -20,3 +20,8 @@ const carId = findCarById(33);
 const sortedcar = sortcar(inventory);
 const sortedCarList = sortedcar.join('\n')
 console.log(`sorted car lists - ${sortedCarList}`);   
+
+
+//4
+const carYearList = carYear(inventory);
+console.log(`${carYearList} \n`);
