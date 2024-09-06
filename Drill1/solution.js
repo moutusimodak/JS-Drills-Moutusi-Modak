@@ -56,7 +56,29 @@ function getNames(Country){
     return newnames;
 }    
    
+// Question - 4    
+function getNameCity(index){
+    if (index === undefined || index === null) {
+        return "Please enter an index";
+    }
+   
+    let f = false
+    const newNameCity =[]
+        for (let i = 0; i < arrayOfObjects.length; i++) {
+            
+            if(arrayOfObjects[i].id === index){
+                newNameCity.push("Name is -"+arrayOfObjects[i].name , " and city is - " + arrayOfObjects[i].city);
+                f=true
+            }
+            
+        }
+        if (!f) {
+            return "No index found";
+        }
+       
+       
+       return newNameCity;
+    }
 
 
-
-module.exports = { getEmail, getHobby, getNames};
+module.exports = { getEmail, getHobby, getNames, getNameCity};
