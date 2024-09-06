@@ -1,5 +1,5 @@
 const arrayOfObjects = require('./persons');
-const {getEmail, getHobby, getNames, getNameCity, getAge,getFirstHobby,getNameEmail} = require("./solution")
+const {getEmail, getHobby, getNames, getNameCity, getAge,getFirstHobby,getNameEmail, getCityCountry} = require("./solution")
 
 //q1
 const emails = getEmail(arrayOfObjects);
@@ -34,3 +34,13 @@ console.log(`The first hobby of all individuals are  - ${hobbyList}`);
 //q7
 const nameemailList = getNameEmail(25);
 console.log(nameemailList)
+
+
+//q8
+
+
+const {CityList,CountryList} = getCityCountry(arrayOfObjects);
+const cityList = CityList.join(' \n ');
+const countryList = CountryList.join('\n');
+console.log(`The cities  are - ${cityList} `);
+console.log(`The countries  are - ${countryList} `);

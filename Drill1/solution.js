@@ -128,6 +128,22 @@ function getNameEmail(age) {
         return "No age found";
     }
     return nameemailList;
-}   
+}  
 
-module.exports = { getEmail, getHobby, getNames, getNameCity, getAge, getFirstHobby, getNameEmail};
+
+// question -8
+function getCityCountry(){
+
+    const CityList =[]
+    const CountryList =[]
+        for (let i = 0; i < arrayOfObjects.length; i++) {
+           
+            CityList.push(arrayOfObjects[i].city);
+            CountryList.push(arrayOfObjects[i].country);
+            }
+            return {CityList,CountryList};
+    }
+       
+
+
+module.exports = { getEmail, getHobby, getNames, getNameCity, getAge, getFirstHobby, getNameEmail, getCityCountry};
