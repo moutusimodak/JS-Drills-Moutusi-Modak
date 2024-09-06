@@ -1,23 +1,30 @@
 const arrayOfObjects = require('./persons.js');
 
 //  Question -1
+
 function getEmail(){
 
     const emails =[]
+
         for (let i = 0; i < arrayOfObjects.length; i++) {   
             emails.push(arrayOfObjects[i].email);
         }    
+
        return emails;
     }
 
 // Question -2
+
 function getHobby( age){
+
     if (age === undefined || age === null) {
         return "Please enter an age.";
     }
    
     let found = false
+
     const hobby =[]
+
         for (let i = 0; i < arrayOfObjects.length; i++) {
             
             if(arrayOfObjects[i].age === age){
@@ -42,7 +49,9 @@ function getNames(Country){
     }
 
     const newnames =[]
+
     let found = false;
+
     for (let i = 0; i < arrayOfObjects.length; i++) {
         
         if(arrayOfObjects[i].isStudent === true && arrayOfObjects[i].country ===Country){
@@ -58,12 +67,14 @@ function getNames(Country){
    
 // Question - 4    
 function getNameCity(index){
+
     if (index === undefined || index === null) {
         return "Please enter an index";
     }
    
     let f = false
     const newNameCity =[]
+
         for (let i = 0; i < arrayOfObjects.length; i++) {
             
             if(arrayOfObjects[i].id === index){
@@ -80,9 +91,11 @@ function getNameCity(index){
        return newNameCity;
     }
 // Question -5
+
 function getAge(){
 
     const newNameCity =[]
+
         for (let i = 0; i < arrayOfObjects.length; i++) {
 
                 newNameCity.push(arrayOfObjects[i].age );
@@ -96,11 +109,13 @@ function getAge(){
 function getFirstHobby(){
 
     const hobbylist =[]
+
         for (let i = 0; i < arrayOfObjects.length; i++) {
 
             if (arrayOfObjects[i].hobbies.length > 0) {
                 hobbylist.push(arrayOfObjects[i].hobbies[0]);
-            } else {
+            } 
+            else {
                 hobbylist.push("No hobbies available");
             }
         }
